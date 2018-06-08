@@ -1,0 +1,94 @@
+{
+  "status": "done",
+  "publicPath": "/static/dist/",
+  "chunks": {
+    "vendor": [
+      {
+        "name": "0-50540763f8eb006296c4.chunk.js",
+        "publicPath": "/static/dist/0-50540763f8eb006296c4.chunk.js",
+        "path": "/home/onhout/marketwatcher/static/dist/0-50540763f8eb006296c4.chunk.js"
+      },
+      {
+        "name": "vendor-50540763f8eb006296c4.css",
+        "publicPath": "/static/dist/vendor-50540763f8eb006296c4.css",
+        "path": "/home/onhout/marketwatcher/static/dist/vendor-50540763f8eb006296c4.css"
+      },
+      {
+        "name": "0-50540763f8eb006296c4.chunk.js.map",
+        "publicPath": "/static/dist/0-50540763f8eb006296c4.chunk.js.map",
+        "path": "/home/onhout/marketwatcher/static/dist/0-50540763f8eb006296c4.chunk.js.map"
+      },
+      {
+        "name": "vendor-50540763f8eb006296c4.css.map",
+        "publicPath": "/static/dist/vendor-50540763f8eb006296c4.css.map",
+        "path": "/home/onhout/marketwatcher/static/dist/vendor-50540763f8eb006296c4.css.map"
+      }
+    ],
+    "market": [
+      {
+        "name": "market-50540763f8eb006296c4.js",
+        "publicPath": "/static/dist/market-50540763f8eb006296c4.js",
+        "path": "/home/onhout/marketwatcher/static/dist/market-50540763f8eb006296c4.js"
+      },
+      {
+        "name": "market-50540763f8eb006296c4.css",
+        "publicPath": "/static/dist/market-50540763f8eb006296c4.css",
+        "path": "/home/onhout/marketwatcher/static/dist/market-50540763f8eb006296c4.css"
+      },
+      {
+        "name": "market-50540763f8eb006296c4.js.map",
+        "publicPath": "/static/dist/market-50540763f8eb006296c4.js.map",
+        "path": "/home/onhout/marketwatcher/static/dist/market-50540763f8eb006296c4.js.map"
+      },
+      {
+        "name": "market-50540763f8eb006296c4.css.map",
+        "publicPath": "/static/dist/market-50540763f8eb006296c4.css.map",
+        "path": "/home/onhout/marketwatcher/static/dist/market-50540763f8eb006296c4.css.map"
+      }
+    ],
+    "dashboard": [
+      {
+        "name": "dashboard-50540763f8eb006296c4.js",
+        "publicPath": "/static/dist/dashboard-50540763f8eb006296c4.js",
+        "path": "/home/onhout/marketwatcher/static/dist/dashboard-50540763f8eb006296c4.js"
+      },
+      {
+        "name": "dashboard-50540763f8eb006296c4.css",
+        "publicPath": "/static/dist/dashboard-50540763f8eb006296c4.css",
+        "path": "/home/onhout/marketwatcher/static/dist/dashboard-50540763f8eb006296c4.css"
+      },
+      {
+        "name": "dashboard-50540763f8eb006296c4.js.map",
+        "publicPath": "/static/dist/dashboard-50540763f8eb006296c4.js.map",
+        "path": "/home/onhout/marketwatcher/static/dist/dashboard-50540763f8eb006296c4.js.map"
+      },
+      {
+        "name": "dashboard-50540763f8eb006296c4.css.map",
+        "publicPath": "/static/dist/dashboard-50540763f8eb006296c4.css.map",
+        "path": "/home/onhout/marketwatcher/static/dist/dashboard-50540763f8eb006296c4.css.map"
+      }
+    ],
+    "main": [
+      {
+        "name": "main-50540763f8eb006296c4.js",
+        "publicPath": "/static/dist/main-50540763f8eb006296c4.js",
+        "path": "/home/onhout/marketwatcher/static/dist/main-50540763f8eb006296c4.js"
+      },
+      {
+        "name": "main-50540763f8eb006296c4.css",
+        "publicPath": "/static/dist/main-50540763f8eb006296c4.css",
+        "path": "/home/onhout/marketwatcher/static/dist/main-50540763f8eb006296c4.css"
+      },
+      {
+        "name": "main-50540763f8eb006296c4.js.map",
+        "publicPath": "/static/dist/main-50540763f8eb006296c4.js.map",
+        "path": "/home/onhout/marketwatcher/static/dist/main-50540763f8eb006296c4.js.map"
+      },
+      {
+        "name": "main-50540763f8eb006296c4.css.map",
+        "publicPath": "/static/dist/main-50540763f8eb006296c4.css.map",
+        "path": "/home/onhout/marketwatcher/static/dist/main-50540763f8eb006296c4.css.map"
+      }
+    ]
+  }
+}
