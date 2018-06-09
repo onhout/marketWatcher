@@ -1,9 +1,12 @@
 {% extends 'Global.html' %}
-{% load render_bundle from webpack_loader %}
+{% load static %}
+{#{% load render_bundle from webpack_loader %}#}
 {% block title %}Investors Dashboard{% endblock %}
 {% block content %}
+
     {#    <h1>{{ market_code }}</h1>#}
     {#    <h3>{{ market_description }}</h3>#}
-    <div id="chart" marketcode="{{ market_code }}" timeframe="{{ timeframe }}"></div>
-    {% render_bundle 'market' %}
+    <div id="app" marketcode="{{ market_code }}" timeframe="{{ timeframe }}"></div>
+    {#    {% render_bundle 'market' %}#}
+
 {% endblock %}

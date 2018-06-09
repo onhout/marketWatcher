@@ -1,5 +1,33 @@
-@import '~bootstrap/scss/bootstrap';
-@import '~font-awesome/scss/font-awesome';
+
+path.candle {
+  stroke: #000000;
+}
+
+path.candle.body {
+  stroke-width: 0;
+}
+
+path.candle.up {
+  fill: #00AA00;
+  stroke: #00AA00;
+}
+
+path.candle.down {
+  fill: #FF0000;
+  stroke: #FF0000;
+}
+
+.ma-0 path.line {
+  fill: none;
+  stroke-width: 1;
+  stroke: #b4a800;
+}
+
+.ma-1 path.line {
+  fill: none;
+  stroke-width: 2;
+  stroke: #e8000d;
+}
 
 /*
  * Base structure

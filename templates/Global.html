@@ -1,29 +1,30 @@
 {% load static %}
-{% load render_bundle from webpack_loader %}
+{#{% load render_bundle from webpack_loader %}#}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>{% block title %}{% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no"
           name="viewport">
-    {% render_bundle 'vendor' 'css' %}
+    {#    {% render_bundle 'vendor' 'css' %}#}
     <!--Load fonts here -->
 
     <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic'
           rel='stylesheet' type='text/css'>
 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/imagehover.css/1.0/css/imagehover.min.css" rel="stylesheet">
+    <link href="{% static "vendor.styles.css" %}" rel="stylesheet">
+    <link href="{% static "main.styles.css" %}" rel="stylesheet">
     <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body id="page-top">
-{% include 'Nav.html' %}
 <div class="container-fluid">
 
     {#        {% include "Sidebar.html" %}#}
     {#        <main class="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">#}
     {% block content %}{% endblock %}
     {#        </main>#}
-    {% render_bundle 'vendor' 'js' %}
+    {#    {% render_bundle 'vendor' 'js' %}#}
 </div>
 <div class="errors"></div>
 {#<script>#}
@@ -36,6 +37,7 @@
 {#  ga('send', 'pageview');#}
 {##}
 {#</script>#}
-
+<script src="{% static "vendor.bundle.js" %}"></script>
+<script src="{% static "main.js" %}"></script>
 </body>
 </html>

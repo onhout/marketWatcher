@@ -1,12 +1,14 @@
 import React from "react";
-import SearchBar from './Chart/SearchBar';
-import ChartComponent from './Chart/ChartComponent';
-import Header from './Info/Header';
-import Fundamentals from './Info/Fundamentals';
-import News from './Info/News';
-import Account_Info from './Info/Account_Info';
-import Sidebar from '../../global/Components/Sidebar';
-import Live_Quote from './Info/Live_Quote';
+import Nav from './global/Components/Nav';
+import SearchBar from './market/js/Chart/SearchBar';
+import ChartComponent from './market/js/Chart/ChartComponent';
+import Header from './market/js/Info/Header';
+import Fundamentals from './market/js/Info/Fundamentals';
+import News from './market/js/Info/News';
+import Account_Info from './market/js/Info/Account_Info';
+import Sidebar from './global/Components/Sidebar';
+import Live_Quote from './market/js/Info/Live_Quote';
+import "./market/sass/market.scss";
 import {Container, Row} from 'reactstrap';
 import {
     getAccountInfo,
@@ -15,7 +17,7 @@ import {
     getSidebarItem,
     getStockData,
     getStockFundamentals
-} from "../../global/utils";
+} from "./global/Utils/utils";
 
 class Root extends React.Component {
     constructor(props) {
@@ -92,9 +94,13 @@ class Root extends React.Component {
     render() {
         return (
             <Container fluid>
+                <Nav/>
                 <Sidebar sidebarItems={this.state.sidebar_items}
                          onStockSymbolChange={(market, timeframe) => this.stockLookup(market, timeframe)}/>
                 <div className="col-sm-9 offset-sm-3 col-md-10 offset-md-2 pt-3">
+                    <SearchBar
+                        onStockSymbolChange={(market, timeframe) => this.stockLookup(market, timeframe)}/>
+                    <hr/>
                     <Row>
                         <div className="col-sm-12 col-md-8">
                             <Header marketname={this.state.market} timeframe={this.state.timeframe}/>
@@ -106,16 +112,11 @@ class Root extends React.Component {
                             <hr/>
                             <Account_Info account_data={this.checkAccountAndQuote()}/>
                             <hr/>
-                            <SearchBar
-                                onStockSymbolChange={(market, timeframe) => this.stockLookup(market, timeframe)}/>
-                            <hr/>
                             <Fundamentals fundamentals={this.state.fundamentals}/>
                             <hr/>
                         </div>
                     </Row>
-
                 </div>
-
             </Container>
         )
     }

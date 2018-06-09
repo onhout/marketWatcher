@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, Card, CardTitle, Container, Form, FormGroup, Input, Label} from 'reactstrap';
-import {getQuoteData} from "../utils";
+import auth from "../Utils/auth"
 
 class Login extends React.Component {
     constructor(props) {
@@ -8,9 +8,28 @@ class Login extends React.Component {
         this.handleChange = this.handleChange.bind(this);
     }
 
-    retrieveData(stock) {
-        getQuoteData(stock).then(data => {
-            this.setState({data});
+    login() {
+        // fetch('/account/rest-auth/login/', {
+        //     method: 'POST',
+        //     headers: {
+        //         Accept: 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         username: this.state.email,
+        //         password: this.state.password,
+        //     }),
+        // });
+
+        let username = this.state.email;
+        let pass = this.state.password;
+
+        auth.login(username, pass, (loggedIn) => {
+            if (loggedIn) {
+                this.setState({
+                    userLogged: true
+                })
+            }
         })
     }
 
@@ -42,11 +61,15 @@ class Login extends React.Component {
                         <Button onClick={() => {
                             this.login()
                         }}>Submit</Button>
+
+                        <Button onClick={() => {
+                            auth.logout();
+                        }}>Logout</Button>
+
                     </Form>
                 </Card>
             </Container>
         )
-
     }
 }
 
