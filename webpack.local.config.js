@@ -6,6 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     context: __dirname,
+    mode: 'development',
     entry: [
         'webpack-dev-server/client?http://192.168.0.18:3000',
         'webpack/hot/only-dev-server',

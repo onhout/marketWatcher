@@ -15,7 +15,7 @@ class News extends React.Component {
         }
         return this.props.market_news.map((list) => {
             return (
-                <News_Item market_news={list}/>
+                <News_Item key={list.url} market_news={list}/>
             )
         });
     }
