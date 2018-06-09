@@ -9,3 +9,5 @@ render(
     <Root/>,
     rootElement
 );
+
+module.hot.accept();

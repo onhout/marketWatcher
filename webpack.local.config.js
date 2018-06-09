@@ -6,27 +6,23 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     context: __dirname,
-    entry: 'index', // entry point of our app. assets/js/index.js should require other js modules and dependencies it needs
-
+    entry: [
+        'webpack-dev-server/client?http://192.168.0.18:3000',
+        'webpack/hot/only-dev-server',
+        './src/index',
+    ],
     output: {
         path: path.resolve('./static/'),
-        publicPath: '/static/',
+        publicPath: 'http://192.168.0.18:3000/static/',
+        // publicPath: '/static/',
         chunkFilename: '[name].bundle.js',
         filename: "[name].js",
     },
 
     plugins: [
-        // new webpack.optimize.UglifyJsPlugin(),
-        // new BundleTracker({filename: './webpack-stats.json'}),
-        new webpack.ProvidePlugin({
-            // $: 'jquery',             // bootstrap 3.x requires
-            // jQuery: 'jquery',
-            // Popper: ['popper.js', 'default'],      // popper
-            // react: 'react',      // react
-            // "window.d3": 'd3',      // d3
-            // d3: 'd3',      // d3
-            // techan: 'techan',     // d3
-        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin(), //VERY IMPORTANT, instead of using HOT in server.js
+        new webpack.ProvidePlugin({}),
         new ExtractTextPlugin('[name].styles.css', {
             allChunks: true
         }),
