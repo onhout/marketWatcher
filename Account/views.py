@@ -16,15 +16,7 @@ rbtrader = Robinhood()
 def robinhood_login(request):
     if request.method == "POST":
         print(request.user)
-        # User.objects.get(username=request.data['email'], password=request.data["password"])
-        # try:
         rbtrader.login(username=request.data["email"], password=request.data["password"])
-        # except RHexceptions.LoginFailed:
-        #     return redirect('market_index') 
-        # content = {
-        #     'user': request.user,  # `django.contrib.auth.User` instance.
-        #     'auth': request.auth,  # None
-        # }
         return Response({"Logged": "logged"})
     return Response({
         "loggedout": "loggedout"

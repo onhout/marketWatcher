@@ -20,6 +20,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name="market_index"),
     path('api', views.market_api, name="market_data"),
+    path('api/indicators', views.market_indicators, name="market_indicators"),
     path('api/fundamentals', views.market_fundamentals, name="market_fundamentals"),
     path('api/news', views.market_news, name="market_news"),
     path('api/get_news_sentiment', views.get_news_sentiment, name="get_news_sentiment"),

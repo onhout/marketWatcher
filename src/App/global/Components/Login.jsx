@@ -63,6 +63,9 @@ class Login extends React.Component {
                         }}>Submit</Button>
 
                         <Button onClick={() => {
+                            this.setState({
+                                userLogged: false
+                            })
                             auth.logout();
                         }}>Logout</Button>
 
